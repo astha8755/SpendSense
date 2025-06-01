@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSense-know where it goes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+      <%= user.name %>
+       <p>SpendSense</p>
+      <a href="/about">About Us</a>
+       <a href="/terms">terms&conditions</a>
+       <a href="/">logout</a>
+    </div>
+    <div class="money">
+        <div class ="tot_bal">
+            <p>Total balance</p>
+        </div>
+        <div class="tot_inc">
+           <p>Total income</p>
+        </div>
+        <div class="tot_ex">
+           <p>total expense</p>
+        </div>
+    </div>
+    <div class="charts">
+         <div class="chart">
+             <canvas id="pieChart"></canvas>
+         </div>
+        <div class="chart">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+      <div class="input">
+         <form>
+              <p>Type
+                 <select>
+                    <option>Select</option>
+                   <option value="income">INCOME</option>
+                   <option value="expense">EXPENSE</option>
+                </select></p>
+               <p>Description
+                 <input type="text" name="Description"></p>
+               <p> Amount
+                 <input type="number"></p>
+                <p>Category
+                    <select>
+                        <option value="">Select Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Salary">Salary</option>
+                    </select> </p>
+                    
+            <button type="submit">Submit</button>  
+         </form>
+         
+         <!-- <div class="list">
+            <h3>Recent Transactions</h3>
+            <!-- <div class="transaction">
+              <span>Dinner - 2024-04-24</span>
+              <span class="amount expense">-₹700</span>
+            </div>
+            <div class="transaction">
+              <span>Train - 2024-04-23</span>
+              <span class="amount expense">-₹1500</span>
+            </div>
+            <div class="transaction">
+              <span>Clothing - 2024-04-22</span>
+              <span class="amount expense">-₹800</span>
+            </div>
+            <div class="transaction">
+              <span>Salary - 2024-04-22</span>
+              <span class="amount income">+₹3000</span>
+            </div> -->
+         </div> -->
+      </div>
+      <div class="list">
+         <h3>Recent Transaction</h3>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <script src="m.js"></script>
+</body>
+</html>
