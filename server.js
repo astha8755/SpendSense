@@ -70,6 +70,11 @@ app.post('/add', async (req, res) => {
   }
 });
 
+app.post('/create', (req, res) => {
+  const { name, email, password } = req.body;
+  // You can process user data here
+  res.sendFile(path.join(__dirname, 'views/main.html'));
+});
 
 
 app.listen(3000, () => {
